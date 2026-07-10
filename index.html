@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceniza Clara</title>
+
+
+
+
+
+<style>
+body{
+font-family:'Manrope',sans-serif;
+font-size:16px;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+font-weight:500;
+letter-spacing:.02em;
+}
+
+nav a{margin-left:5px;color:#333;text-decoration:none}
+
+section{
+padding:80px 6vw;
+max-width:1600px;
+margin:auto;
+}
+
+.hero{
+position:relative;
+height:80vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:flex-end;
+padding-bottom:60px;
+}
+
+#bgvideo{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.overlay{
+top:0;
+left:0;
+right:0;
+bottom:0;
+position:absolute;
+background:rgba(0,0,0,.20);
+z-index:-1;
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+color:rgb(255, 255, 255);
+max-width:900px;
+padding:40px;
+animation:fadeUp 1.5s ease;
+margin:auto;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.modelo{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.modelo img{
+width:100%;
+max-width:700px;
+display:block;
+transition:.5s;
+}
+
+.modelo img:hover{
+transform:scale(1.02);
+}
+
+.categoria{
+font-size:.95rem;
+letter-spacing:.25em;
+text-transform:uppercase;
+margin-bottom:20px;
+opacity:.8;
+}
+
+.hero h1{
+font-size:6rem;
+margin:0;
+line-height:1;
+}
+
+.frase{
+font-size:1.35rem;
+font-weight:300;
+line-height:1.7;
+max-width:650px;
+margin:35px auto;
+}
+
+.btn{
+display:inline-block;
+padding:18px 50px;
+margin-top:25px;
+border:1px solid rgb(255, 255, 255);
+text-decoration:none;
+color:rgb(255, 255, 255);
+transition:.35s;
+letter-spacing:.18em;
+text-transform:uppercase;
+}
+
+.btn:hover{
+background:rgb(255, 255, 255);
+color:black;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:82px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+z-index:9999;
+display:flex;
+justify-content:center;
+border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.header-container{
+width:min(1400px,92%);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:400;
+letter-spacing:.04em;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+font-size:1rem;
+text-decoration:none;
+color:#3d2e1a;
+transition:.3s;
+}
+
+nav a:hover{
+color:black;
+}
+
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:28px 0;font-size:1.2rem;font-weight:500;letter-spacing:.18em;}
+
+.track{display:inline-block;animation:m 25s linear infinite}
+
+@keyframes m{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.placeholder{background:#ddd;height:420px;display:flex;align-items:center;justify-content:center}
+footer{text-align:center;padding:60px}
+
+
+
+
+#soundBtn{
+position:absolute;
+bottom:35px;
+right:35px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.35);
+color:white;
+padding:12px 22px;
+border-radius:50px;
+cursor:pointer;
+font-size:.9rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+transition:.35s;
+}
+
+#soundBtn:hover{
+background:white;
+color:black;
+transform:translateY(-2px);
+}
+
+.concepto{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 14vw;
+background:#887f773f;
+}
+
+.intro{
+font-size:1.35rem;
+font-weight:300;
+line-height:2;
+max-width:900px;
+color:#777;
+margin-bottom:80px;
+}
+
+.concepto h2{
+font-size:4rem;
+line-height:1.25;
+font-weight:400;
+max-width:1100px;
+color:#1f1f1f;
+}
+
+.concepto span{
+display:block;
+margin-top:25px;
+color:#7a644d;
+}
+
+
+
+
+.experience{
+text-align:center;
+padding:60px 0;
+}
+
+.experience h2{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.experience-text{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+margin-bottom:70px;
+color:#555;
+}
+
+.mueble{
+position:relative;
+max-width:1500px;
+margin:auto;
+}
+
+.mueble-video{
+width:100%;
+display:block;
+border-radius:6px;
+object-fit:cover;
+}
+
+.hotspot{
+position:absolute;
+}
+
+.hotspot span{
+display:block;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#d4a64f;
+cursor:pointer;
+box-shadow:0 0 20px rgba(212,166,79,.5);
+transition:.3s;
+}
+
+.hotspot:hover span{
+transform:scale(1.4);
+}
+
+.info{
+position:absolute;
+left:30px;
+top:-30px;
+width:260px;
+padding:20px;
+background:white;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+opacity:0;
+transition:.4s;
+pointer-events:none;
+text-align:left;
+}
+
+.hotspot:hover .info{
+opacity:1;
+}
+
+.h1{
+top:68.5%;
+left:68%;
+}
+
+.h2{
+top:60%;
+left:47%;
+}
+
+.h3{
+top:53.5%;
+left:30%;
+}
+
+.h4{
+top:50%;
+left:22%;
+}
+
+
+
+
+.galeria-renders{
+padding:60px 0;
+text-align:center;
+background:#e1ded9;
+}
+
+.galeria-renders h2{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.galeria-renders p{
+max-width:650px;
+margin:auto;
+color:#887f77;
+margin-bottom:70px;
+font-size:1.15rem;
+line-height:1.8;
+}
+
+.render-slider{
+margin-top:80px;
+overflow:hidden;
+width:100%;
+cursor:grab;
+scroll-behavior:smooth;
+padding-bottom:20px;
+}
+
+.render-slider::-webkit-scrollbar{
+height:8px;
+}
+
+.render-slider::-webkit-scrollbar-thumb{
+background:#d5d5d5;
+border-radius:20px;
+}
+
+.render-track{
+display:flex;
+gap:30px;
+width:max-content;
+padding:0 60px;
+}
+
+.render-card{
+width:520px;
+flex-shrink:0;
+transition:.45s;
+}
+
+.render-card img{
+width:100%;
+height:360px;
+object-fit:cover;
+display:block;
+transition:.5s;
+}
+
+.render-card:hover img{
+transform:scale(1.03);
+}
+
+.render-card h3{
+margin-top:22px;
+font-size:1.4rem;
+}
+
+.render-card span{
+color:#777;
+display:block;
+margin-top:8px;
+line-height:1.7;
+}
+
+.render-card{
+position:relative;
+width:520px;
+height:360px;
+overflow:hidden;
+flex-shrink:0;
+cursor:pointer;
+}
+
+.render-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
+}
+
+.overlay-render{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:rgba(0,0,0,.25);
+color:white;
+opacity:0;
+transition:.45s;
+}
+
+.render-card:hover .overlay-render{
+opacity:1;
+}
+
+.render-card:hover img{
+transform:scale(1.08);
+}
+
+.overlay-render h3{
+font-size:2.5rem;
+margin:0;
+}
+
+.overlay-render p{
+margin-top:22px;
+font-size:1.15rem;
+line-height:1.8;
+color:white;
+max-width:340px;
+}
+
+.overlay-render a{
+display:inline-block;
+padding:12px 28px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.overlay-render a:hover{
+background:white;
+color:black;
+}
+
+.slider-wrapper{
+position:relative;
+width:100%;
+margin:auto;
+}
+
+.flecha{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+z-index:100;
+width:70px;
+height:70px;
+border-radius:50%;
+border:none;
+background:rgba(255,255,255,.85);
+cursor:pointer;
+font-size:38px;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.izquierda{
+left:-35px;
+}
+
+.derecha{
+right:-35px;
+}
+
+.flecha:hover{
+background:white;
+transform:translateY(-50%) scale(1.08);
+}
+
+.render-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.25);
+opacity:0;
+transition:.4s;
+}
+
+.render-card:hover::after{
+opacity:1;
+}
+
+.overlay-render h3::after{
+content:"";
+display:block;
+width:70px;
+height:2px;
+background:white;
+margin:18px auto 22px;
+}
+
+.overlay-render h3{
+transform:translateY(20px);
+transition:.4s;
+}
+
+.overlay-render p{
+transform:translateY(20px);
+transition:.5s;
+}
+
+.render-card:hover .overlay-render h3,
+.render-card:hover .overlay-render p{
+transform:translateY(0);
+}
+
+
+
+
+.metodologia{
+padding:60px 0;
+background:white;
+text-align:center;
+}
+
+.metodologia h2{
+font-size:4rem;
+margin-bottom:30px;
+line-height:1.15;
+}
+
+.metodologia p{
+max-width:760px;
+margin:auto;
+font-size:1.15rem;
+line-height:1.9;
+color:#666;
+margin-bottom:90px;
+}
+
+.timeline{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:0;
+max-width:1300px;
+margin:auto;
+}
+
+.paso{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:220px;
+}
+
+.circulo{
+width:22px;
+height:22px;
+border-radius:50%;
+background:#9b7f58;
+margin-bottom:35px;
+position:relative;
+transform:scale(0);
+opacity:0;
+transition:all .6s ease;
+}
+
+.circulo::after{
+content:"";
+position:absolute;
+left:100%;
+top:50%;
+width:200px;
+height:2px;
+background:#d5d5d5;
+transform:translateY(-50%) scaleX(0);
+transform-origin:left;
+transition:transform .7s ease;
+}
+
+.paso:last-child .circulo::after{
+display:none;
+}
+
+.paso h3{
+font-size:1.5rem;
+margin-bottom:15px;
+opacity:0;
+transform:translateY(25px);
+transition:.6s;
+}
+
+.paso span{
+font-size:.95rem;
+line-height:1.8;
+color:#777;
+max-width:180px;
+opacity:0;
+transform:translateY(25px);
+transition:.6s;
+}
+
+.metodologia.visible .circulo{
+transform:scale(1);
+opacity:1;
+}
+
+.metodologia.visible .circulo::after{
+transform:translateY(-50%) scaleX(1);
+}
+
+.metodologia.visible .paso h3,
+.metodologia.visible .paso span{
+opacity:1;
+transform:translateY(0);
+}
+
+.paso:nth-child(1) .circulo{
+transition-delay:.1s;
+}
+
+.paso:nth-child(1) .circulo::after{
+transition-delay:.4s;
+}
+
+.paso:nth-child(1) h3,
+.paso:nth-child(1) span{
+transition-delay:.7s;
+}
+
+.paso:nth-child(2) .circulo{
+transition-delay:.9s;
+}
+
+.paso:nth-child(2) .circulo::after{
+transition-delay:1.2s;
+}
+
+.paso:nth-child(2) h3,
+.paso:nth-child(2) span{
+transition-delay:1.5s;
+}
+
+.paso:nth-child(3) .circulo{
+transition-delay:1.7s;
+}
+
+.paso:nth-child(3) .circulo::after{
+transition-delay:2s;
+}
+
+.paso:nth-child(3) h3,
+.paso:nth-child(3) span{
+transition-delay:2.3s;
+}
+
+.paso:nth-child(4) .circulo{
+transition-delay:2.5s;
+}
+
+.paso:nth-child(4) .circulo::after{
+transition-delay:2.8s;
+}
+
+.paso:nth-child(4) h3,
+.paso:nth-child(4) span{
+transition-delay:3.1s;
+}
+
+.paso:nth-child(5) .circulo{
+transition-delay:3.3s;
+}
+
+.paso:nth-child(5) h3,
+.paso:nth-child(5) span{
+transition-delay:3.6s;
+}
+
+
+
+
+
+
+
+
+.proceso{
+padding:10px 0;
+}
+
+.proceso h2{
+font-size:4rem;
+text-align:center;
+margin-bottom:20px;
+}
+
+.proceso-intro{
+max-width:760px;
+margin:0 auto 100px;
+text-align:center;
+line-height:1.9;
+color:#666;
+}
+
+.etapa{
+margin-bottom:50px;
+}
+
+.etapa h3{
+font-size:3rem;
+margin-bottom:10px;
+text-align:center;
+}
+
+.etapa p{
+max-width:760px;
+margin:0 auto 50px;
+text-align:center;
+line-height:1.9;
+color:#666;
+}
+
+.imagen-grande img,
+.imagen-grande video{
+width:100%;
+display:block;
+border-radius:10px;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.galeria img,
+.galeria video{
+width:100%;
+display:block;
+border-radius:8px;
+transition:.35s;
+cursor:pointer;
+}
+
+.galeria img:hover,
+.galeria video:hover{
+transform:scale(1.02);
+}
+
+.galeria.planos{
+grid-template-columns:repeat(3,1fr);
+}
+
+.galeria.maqueta{
+grid-template-columns:repeat(5,1fr);
+}
+
+.videos{
+display:grid;
+gap:35px;
+}
+
+.videos video{
+width:100%;
+}
+
+.sistema{
+display:grid;
+gap:35px;
+}
+
+.sistema img,
+.sistema video{
+width:100%;
+}
+
+
+
+.etapa-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:70px;
+align-items:center;
+}
+
+.etapa-grid.reverse{
+grid-template-columns:.8fr 1.2fr;
+}
+
+.etapa-grid.reverse .media{
+order:1;
+}
+
+.etapa-grid.reverse .texto{
+order:2;
+}
+
+.texto h3{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.texto p{
+line-height:1.9;
+color:#666;
+}
+
+
+
+.explosivo-texto h4{
+font-size:1.5rem;
+font-family:'Cormorant Garamond',serif;
+font-weight:400;
+margin:10px 0 40px;
+color:#222;
+}
+
+.explosivo-tag{
+display:block;
+letter-spacing:.25em;
+text-transform:uppercase;
+font-size:.8rem;
+color:#9b7f58;
+margin-bottom:18px;
+}
+
+.explosivo-datos{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px 40px;
+margin-bottom:45px;
+padding:35px 0;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+}
+
+.explosivo-datos .numero{
+display:block;
+font-size:3rem;
+font-family:'Cormorant Garamond',serif;
+color:#222;
+line-height:1;
+margin-bottom:8px;
+}
+
+.explosivo-datos p{
+margin:0;
+font-size:.95rem;
+color:#777;
+line-height:1.5;
+}
+
+.descripcion{
+line-height:1.9;
+color:#666;
+font-size:1rem;
+}
+
+
+
+.maqueta-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+}
+
+.maqueta-grid img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+transition:.4s;
+}
+
+.maqueta-grid img:hover{
+transform:scale(1.04);
+}
+
+
+
+.media-doble{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.media-doble video{
+width:100%;
+}
+
+
+
+.fabricacion{
+position:relative;
+height:600px;
+overflow:hidden;
+}
+
+.fabricacion video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:1;
+}
+
+.fabricacion::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+z-index:2;
+}
+
+.fabricacion-info{
+position:absolute;
+top:50%;
+right:3%;
+transform:translateY(-50%);
+width:500px;
+z-index:3;
+color:white;
+}
+
+.fabricacion-info h3{
+font-size:2rem;
+margin-bottom:2.5px;
+}
+
+.fabricacion-info .intro{
+color:rgba(255,255,255,.88);
+line-height:1;
+margin-bottom:10px;
+}
+
+.fabricacion-info .subtitulo{
+color:#d7c3a2;
+letter-spacing:.2em;
+text-transform:uppercase;
+}
+
+.fabricacion-info .feature{
+padding:0;
+border-top:0.3px solid rgba(255,255,255,.25);
+}
+
+.fabricacion-info .feature:last-child{
+border-bottom:1px solid rgba(255,255,255,.25);
+}
+
+.fabricacion-info .feature h4{
+color:white;
+margin-bottom:0.8px;
+}
+
+.fabricacion-info .feature p{
+color:rgba(255,255,255,.8);
+line-height:1;
+}
+
+
+
+.sistema{
+position:relative;
+height:600px;
+overflow:hidden;
+}
+
+.sistema video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:1;
+}
+
+.sistema::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+z-index:2;
+}
+
+.sistema-info{
+position:absolute;
+top:50%;
+right:3%;
+transform:translateY(-50%);
+width:500px;
+z-index:3;
+color:white;
+}
+
+.sistema-info h3{
+font-size:2rem;
+margin-bottom:2.5px;
+}
+
+.sistema-info .intro{
+color:rgba(255,255,255,.88);
+line-height:1;
+margin-bottom:5px;
+}
+
+.sistema-info .subtitulo{
+color:#d7c3a2;
+letter-spacing:.2em;
+text-transform:uppercase;
+}
+
+.sistema-info .feature{
+padding:1px 0;
+border-top:1px solid rgba(255,255,255,.25);
+}
+
+.sistema-info .feature:last-child{
+border-bottom:1px solid rgba(255,255,255,.25);
+}
+
+.sistema-info .feature h4{
+color:white;
+margin-bottom:0.8px;
+}
+
+.sistema-info .feature p{
+color:rgba(255,255,255,.8);
+line-height:1;
+}
+
+
+
+.materialidad{
+padding:60px 0;
+background:#ffffff;
+}
+
+.material-title{
+text-align:center;
+max-width:800px;
+margin:auto;
+margin-bottom:70px;
+}
+
+.material-title span{
+letter-spacing:.35em;
+font-size:.8rem;
+color:#ffffff;
+}
+
+.material-title h2{
+font-size:3.5rem;
+margin:18px 0;
+}
+
+.material-title p{
+color:#666;
+line-height:1.8;
+}
+
+.materiales{
+display:flex;
+height:600px;
+overflow:hidden;
+}
+
+.panel{
+flex:1;
+position:relative;
+transition:.6s;
+cursor:pointer;
+overflow:hidden;
+}
+
+.panel img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
+}
+
+.panel::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.25);
+transition:.5s;
+}
+
+.panel:hover{
+flex:2;
+}
+
+.panel:hover img{
+transform:scale(1.1);
+}
+
+.panel:hover::after{
+background:rgba(0, 0, 0, 0.25);
+}
+
+.contenido{
+position:absolute;
+left:50%;
+bottom:60px;
+transform:translateX(-50%);
+z-index:5;
+color:white;
+text-align:center;
+width:80%;
+}
+
+.contenido h3{
+font-size:2rem;
+margin-bottom:20px;
+color:white;
+}
+
+.contenido p{
+opacity:0;
+transform:translateY(20px);
+transition:.5s;
+line-height:1.7;
+color:white;
+}
+
+.panel:hover .contenido p{
+opacity:1;
+transform:translateY(0);
+color:white;
+}
+
+
+
+
+
+.ods{
+padding:60px 8vw;
+background:#e1ded9;
+}
+
+.ods-title{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.ods-title span{
+letter-spacing:.35em;
+font-size:.8rem;
+color:#9b7f58;
+}
+
+.ods-title h2{
+font-size:4rem;
+margin:20px 0;
+}
+
+.ods-title p{
+line-height:1.5;
+color:#666;
+}
+
+.ods-item{
+display:grid;
+grid-template-columns:180px 1fr;
+gap:80px;
+padding:50px 0;
+border-top:1px solid #554023;
+}
+
+.ods-item:last-child{
+border-bottom:1px solid #554023;
+}
+
+.numero{
+font-size:2.5rem;
+font-family:'Cormorant Garamond',serif;
+color:#9b7f58;
+}
+
+.texto h3{
+font-size:2rem;
+margin-bottom:5px;
+}
+
+.texto p{
+line-height:1.5;
+color:#666;
+max-width:700px;
+}
+
+
+
+
+
+
+.galeria-final{
+padding:0;
+max-width:none;
+}
+
+.titulo-galeria{
+padding:60px 8vw 10px;
+text-align:center;
+}
+
+.titulo-galeria span{
+letter-spacing:.35em;
+font-size:.8rem;
+color:#9b7f58;
+}
+
+.titulo-galeria h2{
+font-size:4rem;
+margin-top:25px;
+}
+
+.grid-galeria{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+grid-auto-rows:280px;
+gap:10px;
+padding:0 10px 10px;
+}
+
+.item{
+overflow:hidden;
+position:relative;
+}
+
+.item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.8s;
+}
+
+.item:hover img{
+transform:scale(1.08);
+}
+
+.grande{
+grid-column:span 2;
+grid-row:span 2;
+}
+
+.alto{
+grid-row:span 2;
+}
+
+.ancho{
+grid-column:span 2;
+}
+
+
+
+
+
+
+
+.autora{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:90px;
+padding:120px 8vw;
+background:#e1ded9;
+}
+
+.autora-foto img{
+width:80%;
+display:block;
+}
+
+.autora-info{
+max-width:560px;
+}
+
+.etiqueta{
+letter-spacing:.35em;
+text-transform:uppercase;
+font-size:.8rem;
+color:#9b7f58;
+}
+
+.autora-info h2{
+font-size:4rem;
+margin:20px 0;
+}
+
+.autora-info p{
+line-height:2;
+color:#666;
+font-size:1.05rem;
+margin-bottom:45px;
+}
+
+.btn-autora{
+display:inline-block;
+padding:16px 42px;
+border:1px solid black;
+text-decoration:none;
+color:black;
+letter-spacing:.15em;
+text-transform:uppercase;
+transition:.35s;
+}
+
+.btn-autora:hover{
+background:black;
+color:white;
+}
+
+
+
+
+
+
+.fondo1{
+background:#ffffff;
+padding:80px;
+margin-bottom:80px;
+}
+
+.fondo2{
+background:#ffffff;
+padding:80px;
+margin-bottom:80px;
+}
+
+.fondo3{
+background:#e1ded9;
+padding:80px;
+margin-bottom:80px;
+}
+
+.fondo4{
+background:#ffffff;
+padding:80px;
+margin-bottom:80px;
+}
+
+
+
+
+
+
+
+.footer{
+padding:60px 10px;
+text-align:center;
+background:#e1ded9;
+}
+
+.footer-social{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-bottom:35px;
+}
+
+.footer-social a{
+width:50px;
+height:50px;
+border:1px solid #cfcfcf;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#111;
+text-decoration:none;
+transition:.35s;
+}
+
+.footer-social a:hover{
+background:#111;
+color:white;
+transform:translateY(-4px);
+}
+
+.footer p{
+font-size:1.1rem;
+color:#333;
+}
+
+.footer p a{
+color:#333;
+text-decoration:underline;
+}
+
+.footer p a:hover{
+color:black;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+<header>
+<div class="header-container">
+<div class="logo">
+CENIZA CLARA
+</div>
+<nav>
+<a href="#concepto">Concepto</a>
+<a href="#diseno">Diseño</a>
+<a href="#metodologia">Metodología</a>
+<a href="#proceso">Proceso</a>
+<a href="#materiales">Materialidad</a>
+<a href="#ods">Impacto</a>
+<a href="#galeria">Galería</a>
+<a href="#autora">Diseñadora</a>
+</nav>
+</div>
+</header>
+
+
+
+
+<section class="hero">
+<video
+id="bgvideo"
+autoplay
+muted
+loop
+playsinline
+preload="auto">
+<source src="images9/VID2.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="hero-content">
+<p class="categoria">
+Furniture Design</p>
+<h1>
+CENIZA CLARA
+</h1>
+<p class="frase">
+Los mejores momentos del hogar nunca son planeados;<br>
+el diseño solo crea las condiciones para que sucedan.
+</p>
+<a href="#concepto" class="btn">
+Descubrir
+</a>
+</div>
+<button id="soundBtn">
+♫
+</button>
+</section>
+
+
+
+
+<div class="marquee">
+<div class="track">
+EL DISEÑO NO TRANSFORMA LOS OBJETOS. TRANSFORMA LA MANERA EN QUE LAS PERSONAS CONVIVEN.
+| EL DISEÑO NO TRANSFORMA LOS OBJETOS. TRANSFORMA LA MANERA EN QUE LAS PERSONAS CONVIVEN.
+| EL DISEÑO NO TRANSFORMA LOS OBJETOS. TRANSFORMA LA MANERA EN QUE LAS PERSONAS CONVIVEN.
+</div>
+</div>
+
+
+
+
+
+<section id="concepto" class="concepto">
+<p class="intro">
+En una época donde el hogar comparte su protagonismo
+con las pantallas y la inmediatez...
+</p>
+<h2>
+Ceniza Clara nace de una convicción:
+<span>
+los objetos también participan
+en la manera en que las personas conviven.
+</span>
+</h2>
+</section>
+
+
+
+
+
+<section id="diseno" class="experience">
+<h2>
+Diseñado desde la experiencia
+</h2>
+<p class="experience-text">
+Cada decisión responde a una pregunta:
+¿cómo puede un objeto favorecer la convivencia?
+</p>
+<div class="mueble">
+<video
+class="mueble-video"
+autoplay
+muted
+loop
+playsinline
+preload="auto">
+<source src="images/VID04.mp4" type="video/mp4">
+</video>
+<div class="hotspot h1">
+<span></span>
+<div class="info">
+<h3>Repisas</h3>
+<p>
+Cada objeto exhibido aporta identidad al espacio sin competir con quienes lo viven.</p>
+</div>
+</div>
+<div class="hotspot h2">
+<span></span>
+<div class="info">
+<h3>Compartimento para cobijas</h3>
+<p>
+Las cobijas desaparecen de la vista, pero nunca del alcance. Porque las mejores noches suelen alargarse más de lo planeado.
+</p>
+</div>
+</div>
+<div class="hotspot h3">
+<span></span>
+<div class="info">
+<h3>Cajones</h3>
+<p>
+Los objetos cotidianos encuentran un lugar propio para que la atención permanezca donde realmente importa: las personas.
+</div>
+</div>
+<div class="hotspot h4">
+<span></span>
+<div class="info">
+<h3>Organizador giratorio</h3>
+<p>
+No obliga a levantarse, interrumpir una conversación o romper un momento compartido. Todo permanece al alcance mientras la convivencia continúa.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="galeria-renders">
+<h2>
+Explora Ceniza Clara
+</h2>
+<p>
+Cada vista revela una forma distinta de habitar el mismo objeto.
+</p>
+<div class="slider-wrapper">
+<button class="flecha izquierda">
+&#10094;
+</button>
+<div class="render-slider">
+<div class="render-track">
+<div class="render-card">
+<img src="images5/render1.png">
+<div class="overlay-render">
+<h3>Vista General</h3>
+<p>
+La expresión completa de Ceniza Clara.
+</p>
+</div>
+</div>
+<div class="render-card">
+<img src="images6/render2.png">
+<div class="overlay-render">
+<h3>Almacenamiento Integrado</h3>
+<p>
+Cada compartimento mantiene el orden sin alterar la estética.
+</p>
+</div>
+</div>
+<div class="render-card">
+<img src="images6/render3.png">
+<div class="overlay-render">
+<h3>Detalles Constructivos</h3>
+<p>
+Materiales, iluminación y acabados que dan identidad a la pieza.
+</p>
+</div>
+</div>
+<div class="render-card">
+<img src="images6/render4.png">
+<div class="overlay-render">
+<h3>Exhibición y Resguardo</h3>
+<p>
+Espacios abiertos y cerrados para adaptarse a cada momento.
+</p>
+</div>
+</div>
+<div class="render-card">
+<img src="images7/render5.png">
+<div class="overlay-render">
+<h3>Organizador giratorio</h3>
+<p>
+Los objetos permanecen al alcance mientras la convivencia continúa.
+</p>
+</div>
+</div>
+</div>
+<button class="flecha derecha">
+&#10095;
+</button>
+</div>
+</section>
+
+
+
+
+
+
+<section id="metodologia" class="metodologia">
+<h2>
+Diseñar experiencias.<br>
+No objetos.
+</h2>
+<p>
+Cada decisión en Ceniza Clara parte de una necesidad humana.
+El objeto no busca imponer una forma de vivir,
+sino facilitar los comportamientos que fortalecen la convivencia.
+</p>
+<div class="timeline">
+<div class="paso">
+<div class="circulo"></div>
+<h3>Necesidad</h3>
+<span>
+Detectar un problema cotidiano.
+</span>
+</div>
+<div class="paso">
+<div class="circulo"></div>
+<h3>Comportamiento</h3>
+<span>
+Comprender cómo interactúan las personas.
+</span>
+</div>
+<div class="paso">
+<div class="circulo"></div>
+<h3>Diseño</h3>
+<span>
+Traducir esa conducta en decisiones formales.
+</span>
+</div>
+<div class="paso">
+<div class="circulo"></div>
+<h3>Experiencia</h3>
+<span>
+Facilitar momentos naturales de convivencia.
+</span>
+</div>
+<div class="paso">
+<div class="circulo"></div>
+<h3>Emoción</h3>
+<span>
+Crear recuerdos compartidos alrededor del objeto.
+</span>
+</div>
+</div>
+</section>
+
+
+
+
+<section id="proceso" class="metodologia">
+<h2>Proceso creativo</h2>
+<p class="proceso-intro">
+Desde las primeras ideas hasta la fabricación del prototipo,
+cada etapa permitió validar decisiones de diseño, funcionalidad
+y manufactura.
+</p>
+
+
+<div class="etapa">
+<h3>Bocetaje</h3>
+<p>
+Se exploraron distintas configuraciones antes de llegar a la propuesta final.
+Las primeras seis imágenes corresponden a dos alternativas de diseño,
+mientras que las últimas muestran la propuesta seleccionada.
+</p>
+<div class="galeria">
+<img src="images2/BOCETO1.png">
+<img src="images3/BOCETO3.png">
+<img src="images3/BOCETO5.png">
+<img src="images3/BOCETO2.png">
+<img src="images3/BOCETO4.png">
+<img src="images4/BOCETO6.png">
+</div>
+</div>
+
+
+<div class="etapa">
+<h3>Moodboard</h3>
+<p>
+Definición del lenguaje formal, materiales, colores y atmósfera del proyecto.
+</p>
+<div class="imagen-grande">
+<img src="images2/MOODBOARD.png">
+</div>
+</div>
+
+
+<div class="etapa">
+<h3>Planos técnicos</h3>
+<p>
+Se desarrolló la documentación completa de fabricación.
+Aquí se muestran únicamente algunos planos representativos.
+</p>
+<div class="galeria planos">
+<img src="images2/PLANO1.png">
+<img src="images2/PLANO2.png">
+<img src="images2/PLANO3.png">
+</div>
+</div>
+
+
+<div class="etapa fondo2">
+<div class="etapa-grid">
+<div class="media">
+<img src="images2/EXPLOSIVO.png">
+</div>
+<div class="texto explosivo-texto">
+<h3>Explosivo</h3>
+<h4>
+Diseñado para ensamblarse.
+</h4>
+<div class="explosivo-datos">
+<div>
+<span class="numero">34</span>
+<p>Paneles</p>
+</div>
+<div>
+<span class="numero">7</span>
+<p>Herrajes y mecanismos distintos</p>
+</div>
+<div>
+<span class="numero">1</span>
+<p>Estructura</p>
+</div>
+<div>
+<span class="numero">∞</span>
+<p>Momentos compartidos</p>
+</div>
+</div>
+<p class="descripcion">
+El despiece revela cómo cada componente participa en un sistema pensado para facilitar la fabricación, el transporte y el montaje sin comprometer la estabilidad ni la estética de la pieza.
+</p>
+</div>
+</div>
+</div>
+
+
+<div class="etapa fondo3">
+<h3>Maqueta</h3>
+<p>
+Las ideas cambian cuando pueden tocarse. La maqueta permitió evaluar proporciones, funcionamiento y experiencia espacial antes de construir el prototipo final.
+</p>
+<div class="maqueta-grid">
+<img src="images/MAQUETA1.png">
+<img src="images4/MAQUETA2.png">
+<img src="images5/MAQUETA3.png">
+<img src="images3/MAQUETA4.png">
+<img src="images/MAQUETA5.png">
+</div>
+</div>
+
+
+<div class="etapa sistema">
+<video autoplay muted loop playsinline>
+<source src="images10/VID03.mp4">
+</video>
+<div class="sistema-info">
+<span class="subtitulo">
+PROCESO
+</span>
+<h3>Fabricación</h3>
+<p class="intro">
+El prototipo fue construido mediante procesos reales de manufactura para validar la viabilidad del diseño y comprobar cada decisión constructiva.
+</p>
+<div class="feature">
+<h4>Corte de piezas</h4>
+<p>Todas las piezas fueron dimensionadas para optimizar material y reducir desperdicios.</p>
+</div>
+<div class="feature">
+<h4>Ensamble</h4>
+<p>Se verificó la precisión dimensional y el comportamiento estructural durante el armado.</p>
+</div>
+<div class="feature">
+<h4>Pruebas</h4>
+<p>Se evaluó estabilidad y funcionamiento antes de obtener el prototipo final.</p>
+</div>
+</div>
+</div>
+
+
+<div class="etapa sistema">
+<video autoplay muted loop playsinline>
+<source src="images11/VID01.mp4">
+</video>
+<div class="fabricacion-info">
+<span class="subtitulo">
+PROCESO
+</span>
+<h3>Sistema Armable</h3>
+<p class="intro">
+El sistema desmontable permite transportar la pieza con facilidad sin comprometer su estabilidad ni su apariencia final.
+</p>
+<div class="feature">
+<h4>Minifix</h4>
+<p>Unión mecánica oculta que mantiene una apariencia limpia.</p>
+</div>
+<div class="feature">
+<h4>Montaje Intuitivo</h4>
+<p>El proceso de armado puede realizarse sin alterar la integridad de la estructura.</p>
+</div>
+<div class="feature">
+<h4>Transporte</h4>
+<p>El mobiliario ocupa menos volumen durante su traslado y almacenamiento.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<section id="materiales" class="materialidad">
+<div class="material-title">
+<h2>
+Materialidad
+</h2>
+<p>
+Los materiales construyen la experiencia.
+Cada acabado fue seleccionado por su resistencia,
+calidez y capacidad para acompañar la vida cotidiana.
+</p>
+</div>
+<div class="materiales">
+<div class="panel">
+<img src="images2/MELAMINA.jpg">
+<div class="contenido">
+<h3>Melamina</h3>
+<p>
+Superficie resistente al desgaste y de fácil mantenimiento.
+</p>
+</div>
+</div>
+<div class="panel">
+<img src="images2/LATONADO.jpg">
+<div class="contenido">
+<h3>Metal</h3>
+<p>
+Proporciona estabilidad estructural y larga vida útil.
+</p>
+</div>
+</div>
+<div class="panel">
+<img src="images2/HERRAJES.jpg">
+<div class="contenido">
+<h3>Herrajes</h3>
+<p>
+Elementos ocultos que garantizan un armado preciso.
+</p>
+</div>
+</div>
+<div class="panel">
+<img src="images2/ACABADOS.jpg">
+<div class="contenido">
+<h3>Acabados</h3>
+<p>
+Texturas cálidas que integran el mobiliario al hogar.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section id="ods" class="ods">
+<div class="ods-title">
+<h2>Impacto</h2>
+<p>
+Diseñar también es cuidar.
+Cada decisión de Ceniza Clara busca mejorar la manera
+en que las personas viven, comparten y conservan
+sus espacios.
+</p>
+</div>
+<div class="ods-item">
+<div class="numero">
+ODS 3
+</div>
+<div class="texto">
+<h3>Salud y bienestar</h3>
+<p>
+El diseño promueve espacios ordenados,
+seguros y funcionales que favorecen
+la convivencia cotidiana.
+</p>
+</div>
+</div>
+<div class="ods-item">
+<div class="numero">
+ODS 11
+</div>
+<div class="texto">
+<h3>Ciudades y comunidades sostenibles</h3>
+<p>
+El sistema desmontable prolonga la vida útil
+del producto y reduce el impacto asociado
+al transporte.
+</p>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<section id="galeria" class="galeria-final">
+<div class="titulo-galeria">
+<h2>
+Galería
+</h2>
+<p>
+Cada fotografía cuenta una historia distinta.
+</p>
+</div>
+<div class="grid-galeria">
+<div class="item grande">
+<img src="images7/FOTO1.jpg">
+</div>
+<div class="item">
+<img src="images7/FOTO2.jpg">
+</div>
+<div class="item">
+<img src="images7/FOTO3.jpg">
+</div>
+<div class="item ancho">
+<img src="images7/FOTO10.jpg">
+</div>
+<div class="item alto">
+<img src="images7/FOTO4.jpg">
+</div>
+<div class="item alto">
+<img src="images8/FOTO5.jpg">
+</div>
+<div class="item alto">
+<img src="images9/FOTO7.jpg">
+</div>
+<div class="item alto">
+<img src="images8/FOTO6.jpg">
+</div>
+<div class="item alto">
+<img src="images8/FOTO8.jpg">
+</div>
+<div class="item alto">
+<img src="images8/FOTO11.jpg">
+</div>
+<div class="item grande">
+<img src="images8/FOTO9.jpg">
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<section class="ending">
+<h2>
+Las mejores conversaciones
+nunca suceden alrededor de un objeto.
+</h2>
+<h3>
+Suceden gracias a él.
+</h3>
+<h1>
+CENIZA CLARA
+</h1>
+</section>
+
+
+
+
+
+
+<section id="autora" class="autora">
+<div class="autora-foto">
+<img src="images2/AUTORA.jpeg" alt="Diana Arizmendi">
+</div>
+<div class="autora-info">
+<h2>
+Diseñadora 
+</h2>
+<p>
+¡Hola! Soy Diana Arizmendi González, diseñadora industrial egresada de la Universidad Anáhuac México. Mi mayor interés se encuentra en el diseño de mobiliario e interiores, donde busco crear espacios y objetos capaces de enriquecer la vida cotidiana. También disfruto explorar disciplinas como la joyería, la decoración, la moda y la arquitectura, entendiendo el diseño como una herramienta para conectar a las personas con su entorno mediante experiencias funcionales, estéticas y memorables.</p>
+<a href="https://www.instagram.com/livs_design_/" class="btn-autora">
+Conocer más
+</a>
+</div>
+</section>
+
+
+
+
+
+
+
+<footer class="footer">
+<div class="footer-social">
+<a href="https://www.facebook.com/dianne.arizmendi.33" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.instagram.com/livs_design_/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.linkedin.com/in/diana-arizmendi-gonz%C3%A1lez-a35880206/" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a href="mailto:diana.arizmendi.glez@gmail.com">
+<i class="far fa-envelope"></i>
+</a>
+</div>
+        <p>&copy; Livier Design: <a href="https://www.instagram.com/livs_design_/">Diana Arizmendi González</a>.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+<script>
+const video=document.getElementById("bgvideo");
+const btn=document.getElementById("soundBtn");
+btn.addEventListener("click",()=>{
+video.muted=false;
+video.volume=.75;
+video.play();
+btn.style.display="none";
+});
+
+
+
+
+
+
+const slider=document.querySelector(".render-slider");
+let mover;
+document.querySelector(".derecha").addEventListener("mouseenter",()=>{
+mover=setInterval(()=>{
+slider.scrollLeft+=20;
+},40);
+});
+document.querySelector(".derecha").addEventListener("mouseleave",()=>{
+clearInterval(mover);
+});
+document.querySelector(".izquierda").addEventListener("mouseenter",()=>{
+mover=setInterval(()=>{
+slider.scrollLeft-=20;
+},40);
+});
+document.querySelector(".izquierda").addEventListener("mouseleave",()=>{
+clearInterval(mover);
+});
+
+
+
+
+
+
+const metodologia = document.querySelector(".metodologia");
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+metodologia.classList.add("visible");
+}
+});
+},{
+threshold:0.35
+});
+observer.observe(metodologia);
+
+</script>
+
+
+
+
+
+</body></html>
